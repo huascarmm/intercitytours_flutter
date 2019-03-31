@@ -1,16 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:intercitytours_flutter/Bar.dart';
+import 'package:intercitytours_flutter/Body.dart';
 
-void main() => runApp(
-    MaterialApp(
-      home: new Scaffold(
-        appBar: null,
-        body: new Container(
-          decoration: new BoxDecoration(
-              image: new DecorationImage(image: new NetworkImage("http://www.technocrazed.com/wp-content/uploads/2015/12/Paris-Wallpaper-background-21.jpg"),
-                  fit: BoxFit.cover)
+void main() => runApp(new App());
+
+class App extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+        home: new Stack(
+      children: <Widget>[
+        SizedBox.expand(
+          child: Image.network(
+            "http://www.technocrazed.com/wp-content/uploads/2015/12/Paris-Wallpaper-background-21.jpg",
+            fit: BoxFit.cover,
           ),
-          child: null /* add child content here */,
-        )
-      )
-    )
-);
+        ),
+        Scaffold(
+            appBar: new Bar().build('hola caro'),
+            backgroundColor: Colors.transparent,
+            body: new Container(
+              child: Body() /* add child content here */,
+            ))
+      ],
+    ));
+  }
+}
