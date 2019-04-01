@@ -15,14 +15,15 @@ class Body extends StatelessWidget {
             height: 64.0,
           ),
         ),
-        Container(
-            padding: EdgeInsets.all(15.0),
+        Padding(
+          padding: EdgeInsets.all(15.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
                     "¿Cuanto costaria un viaje a Europa? Elige las ciudades y el auto que te gustaria usar y obtiene un precio personalizado",
-                    style: estilo),
+                    style: Theme.of(context).textTheme.title,
+                ),
                 TextFormField(
                     autocorrect: false,
                     //focusNode: _focusNode,
