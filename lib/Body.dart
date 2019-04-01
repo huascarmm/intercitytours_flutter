@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:date_range_picker/date_range_picker.dart' as DateRagePicker;
 
+
 class Body extends StatelessWidget {
-  var estilo = TextStyle(color: Colors.white, fontSize: 20.0);
+  
   @override
   Widget build(BuildContext context) {
     return Column(

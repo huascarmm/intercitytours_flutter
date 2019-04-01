@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-final ThemeData _defaultTheme = _buildDefaultTheme();
-
+final ThemeData _defaultTheme = ThemeData.dark();
+/*
 ThemeData _buildDefaultTheme(){
   return ThemeData(
     // Define the default Brightness and Colors
@@ -20,4 +20,4 @@ ThemeData _buildDefaultTheme(){
       body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
     ),
   );
-}
+}*/
